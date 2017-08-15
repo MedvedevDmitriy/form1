@@ -1,0 +1,459 @@
+// html, body{
+//   height: 100%;
+// }
+// body{
+//   font-family: @font-base;
+//   font-size: @font-size-base;
+// }
+@imagesDir:"../images/imagess";
+body {
+	//background-image:url(src/images/map_bg.png);
+	background-image:url("@{imagesDir}/splash-screen.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+h3 {
+	margin: 0px;
+	text-align: center;
+}
+
+.mainHeader {
+	width: 250px;
+	height: 40px;
+
+	&-buttons {
+		padding: 5px 0px 0px 15px;
+
+		&__buttonForm, &__buttonClose {
+			padding: 5px 5px 5px 5px;
+			margin: 0px 10px 10px 0px;
+			border-radius: 10px;
+			border: 1px solid #ffff00;
+			background-color: rgba(204, 102, 255, 1);
+			color: #ffff00;
+		}
+
+		&__buttonForm:hover{
+			background-color: #ffff00;
+			color: #00004d;
+			cursor: pointer;
+		}
+
+		&__buttonClose:hover {
+			background-color: #00004d;
+			color: #ffff00;
+			cursor: pointer;
+		}
+	}
+}
+
+.linkPhoto {
+	padding: 0px 0px 0px 45px;
+	color: #ffff00;
+}
+
+.linkPhoto:hover {
+	color: #00004d;
+}
+
+@distance-coefficient: 10;
+@base-color: rgba(255, 153, 255, 1);
+
+@item-color-odd: @base-color;
+@item-color-even: spin(@item-color-odd, 180); // комплементарный цвет
+
+@login-color: #009900; // green;
+@fname-color: #666699; 
+@lname-color: spin(@fname-color, 180);
+@address1-color: #ffa500; // orange;
+@address2-color: spin(@address1-color, 180);
+@city-color: #800000; // maroon;
+@country-color: spin(@city-color, 180);
+@zip-color: #00ff00; // lime;
+@state-color: spin(@zip-color, 180);
+@info-color: spin(@login-color, 60);
+@email-color: #800080; // purple;
+@email2-color: spin(@email-color, 90);
+@password-color: #0000ff; // blue;
+@password2-color: spin(@password-color, 90);
+@checkbox-color: #000000; // black;
+@radio-color: #00ffff; // aqua;
+@button-color: #ff0000; // red;
+
+.mainForm {
+	padding: 30px 0px 0px 15px;
+	width: 60px*@distance-coefficient;
+}
+
+.formField {	
+
+	&-item:nth-child(odd) {
+		background-color: @item-color-odd;
+	}
+
+	&-item:nth-child(even) {
+		background-color: @item-color-even;
+	}
+	
+	&-item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 5px*@distance-coefficient;
+		
+		&__label {
+			flex: left;
+			text-align: center;
+			width: 5%*@distance-coefficient;
+		}
+
+		&__input {
+			flex: right;
+			text-align: center;
+			width: 5%*@distance-coefficient;
+		}
+	}
+
+	&-login {
+		
+		&__label {
+			color: @login-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-email {
+		
+		&__label {
+			color: @email-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-email2 {
+		
+		&__label {
+			color: @email2-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-password {
+		
+		&__label {
+			color: @password-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-password2 {
+		
+		&__label {
+			color: @password2-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-fname {
+		
+		&__label {
+			color: @fname-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-lname {
+		
+		&__label {
+			color: @lname-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-address1 {
+		
+		&__label {
+			color: @address1-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-address2 {
+		
+		&__label {
+			color: @address2-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-city {
+		
+		&__label {
+			color: @city-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-state {
+		
+		&__label {
+			color: @state-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-zip {
+		
+		&__label {
+			color: @zip-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-country {
+		
+		&__label {
+			color: @country-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-info {
+		
+		&__label {
+			color: @info-color;
+		}
+
+		&__input {
+
+		}
+	}
+
+	&-radio {
+		
+		&__label {
+			color: @radio-color;
+		}
+
+		&__input {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&-checkbox {
+		
+		&__label {
+			color: @checkbox-color;
+		}
+
+		&__input {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&-buttons {
+		
+		&__buttonSubmit, &__buttonReset {
+		color: @button-color;
+		width: 5%*@distance-coefficient;
+		height: 5px*@distance-coefficient;
+		background-color: @checkbox-color;
+		font-size: 2.5px*@distance-coefficient;
+		}
+	}	
+}
+
+.radio-female {
+	flex: left;
+	width: 5%*@distance-coefficient;
+}
+
+.radio-male {
+	flex: right;
+	width: 5%*@distance-coefficient;
+}
+
+// customize radio buttons
+// .radio {
+//    width: 15px;
+//    height: 15px;
+//    background-color:grey;
+//  }
+
+// input[type='radio']:after {
+// 	width: 15px;
+// 	height: 15px;
+// 	border-radius: 15px;
+// 	top: -2px;
+// 	left: -1px;
+// 	position: relative;
+// 	background-color: #d1d3d1;
+// 	content: '';
+// 	display: inline-block;
+// 	visibility: visible;
+// 	border: 2px solid white;
+// }
+
+// input[type='radio']:checked:after {
+// 	width: 15px;
+// 	height: 15px;
+// 	border-radius: 15px;
+// 	top: -2px;
+// 	left: -1px;
+// 	position: relative;
+// 	background-color: #ffa500;
+// 	content: '';
+// 	display: inline-block;
+// 	visibility: visible;
+// 	border: 2px solid white;
+// }
+
+// .radio-item {
+//   display: inline-block;
+//    position: relative;
+//   // padding: 0 6px;
+//   // margin: 10px 0 0;
+// }
+
+// .radio-item__input {
+//   display: none;
+// }
+
+// .radio-item__label {
+//   //color: #666;
+//   //font-weight: normal;
+// }
+
+// .radio-item__label:before {
+//   content: " ";
+//   display: inline-block;
+//   // position: relative;
+//   // top: 5px;
+//   // margin: 0 5px 0 0;
+//   width: 15px;
+//   height: 15px;
+//   border-radius: 15px;
+//   //border: 2px solid #004c97;
+//   background-color: grey;
+// }
+
+// .radio-item__input:checked, .radio-item__label:after {
+//   border-radius: 10px;
+//   width: 10px;
+//   height: 10px;
+//   color: white;
+//    position: absolute;
+//    top: 9px;
+//    left: 10px;
+//   content: " ";
+//   display: block;
+//   background: blue;
+// }
+
+
+ // .radio-item {
+ // 	display: flex;
+
+ // 	&__input {
+ // 		flex: left;
+ // 		width: 5%*@distance-coefficient;
+ // 	}
+
+ // 	&__label {
+ // 		flex: right;
+	// 	width: 5%*@distance-coefficient;
+ // 	}	
+ // }
+
+ .checkbox-shoppingFashion {
+ 	flex: left;
+ 	width: 5%*@distance-coefficient;
+ }
+
+ .checkbox-sports {
+ 	flex: center;
+ 	width: 5%*@distance-coefficient;
+ }
+
+ .checkbox-travel {
+ 	flex: right;
+ 	width: 5%*@distance-coefficient;
+ }
+
+ .checkbox-red {
+ 	flex: left;
+ 	width: 5%*@distance-coefficient;
+ }
+
+ .checkbox-green {
+ 	flex: center-left;
+ 	width: 5%*@distance-coefficient;
+ }
+
+ .checkbox-brown {
+ 	flex: center-right;
+ 	width: 5%*@distance-coefficient;
+ }
+
+ .checkbox-blueGold {
+ 	flex: right;
+ 	width: 5%*@distance-coefficient;
+ }
+
+ // .checkbox-item {
+ // 	display: flex;
+
+ // 	&__input {
+ // 		flex: left;
+ // 		width: 5%*@distance-coefficient;
+ // 	}
+
+ // 	&__label {
+ // 		flex: right;
+ // 		width: 5%*@distance-coefficient;
+ // 	}	
+ // }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Template v(0.0.1)</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+	<div class="mainHeader">
+		<div class="mainHeader-buttons">
+			<input class="mainHeader-buttons__buttonForm" type="button" id="showForm" value="SHOW FORM"/>
+			<input class="mainHeader-buttons__buttonClose" type="button" id="closeForm" value="CLOSE FORM"/>
+		</div>	
+	</div>
+	<a class="linkPhoto" href="images/imagess/1.png">photo</a>
+</header>
+<main class="an-main-wrap toggleSidebar">
+	<form id="form" class="mainForm">		
+		<fieldset class="formField">
+			<div class="formField-item formField-login">
+				<div class="formField-item__label formField-login__label">
+					<label for="login">Ф.И.О.</label>
+				</div>
+				<div class="formField-item__input formField-login__input">
+					<input type="text" id="login" name="login"/>
+				</div>	
+			</div>		
+			<div class="formField-item formField-email">
+				<div class="formField-item__label formField-email__label">
+					<label for="email">E-mail</label>
+				</div>
+				<div class="formField-item__input formField-email__input">
+					<input type="email" id="email" name="email"/>
+				</div>
+			</div>
+			<div class="formField-item formField-password">
+				<div class="formField-item__label formField-password__label">
+					<label for="psw">Пароль</label>
+				</div>
+				<div class="formField-item__input formField-password__input">
+					<input type="password" id="psw" name="psw"/>
+				</div>
+			</div>
+			<div class="formField-item formField-password2">
+				<div class="formField-item__label formField-password2__label">
+					<label for="psw2">Повтор пароля</label>
+				</div>
+				<div class="formField-item__input formField-password2__input">
+					<input type="password" id="psw2" name="psw2"/>
+				</div>
+			</div>
+			<div class="formField-item formField-checkbox">
+				<div class="formField-item__input formField-chekbox__input">
+					<input type="checkbox" id="check" name="check"/>
+				</div>
+				<div class="formField-item__label formField-chekbox__label">
+					<label for="check">Я принимаю пользовательское соглашение</label>
+				</div>
+			</div>
+			<div class="formField-item formField-buttons">
+			<input class="formField-buttons__buttonSubmit" type="submit" name="signUp" value="Зарегистрироваться"/>
+			</div>
+		</fieldset>
+	</form>
+</main>
+<script src="/js/lib/jquery.min.js"></script>
+<script src="js/common.min.js"></script>
+</body>
+</html>
